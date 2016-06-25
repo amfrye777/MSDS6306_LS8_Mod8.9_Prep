@@ -21,11 +21,4 @@ d1$CTR <- d1$Clicks/d1$Impressions
 
 head(d1)
 
-  ##Plot distributions of number impressions for the age groups
-ggplot(d1, aes(x=Impressions, fill=AgeGroup))+
-  geom_histogram(binwidth=1)
 
-  ##Plot distributions of click-through-rate (CTR = click/impression) for the age groups
-ggplot(subset(d1, CTR>0), aes(x=CTR, fill=AgeGroup))+
-  labs(title="Click-through rate by age group (05/01/2012)")+
-  geom_histogram(binwidth=.025)
